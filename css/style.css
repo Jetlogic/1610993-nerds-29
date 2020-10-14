@@ -290,14 +290,20 @@ img {
 	list-style: none;
 }
 
-.template a {
+.shop-button {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.shop-button {
 	background-color: var(--basic-grey);
 }
 
-.template a: hover {
+.shop-button: hover {
 	background-color: var(--basic-dark-grey);
 }
 
-.template a: focus {
+.shop-button: focus {
 	background-color: var(--basic-extra-dark-grey);
 }
