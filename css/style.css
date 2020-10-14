@@ -21,12 +21,12 @@
 }
 
 body {
-	  min-width: 960px;
-	  font-family: "Roboto", Arial, sans-serif;
-	  font-size: 16px;
-	  line-height: 24px;
-	  color: var(--basic-black);
-	  background-color: var(--basic-white);
+	min-width: 960px;
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--basic-black);
+	background-color: var(--basic-white);
 }
 
 a {
@@ -34,8 +34,8 @@ a {
 }
 
 img {
-	  max-width: 100%;
-	  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .main-navigation {
@@ -81,13 +81,18 @@ img {
 	font-size: 55px;
 	line-height: 55px;
 	color: var(--basic-black);
+	margin: 0px;
+}
+
+.button {
+	text-transform: uppercase;
+	color: var(--basic-white);
 }
 
 .learn-more {
 	background-color: var(--basic-pink);
-	text-transform: uppercase;
-	color: var(--basic-white);
 	line-height: 18px;
+	margin: 0px;
 }
 
 .learn-more:hover {
@@ -96,7 +101,6 @@ img {
 
 .learn-more:focus {
 	background-color: var(--basic-extra-dark-pink);
-	color: var(--basic-white);
 	opacity: 0.3;
 }
 
@@ -118,8 +122,6 @@ img {
 .order-pink {
 	background-color: var(--basic-pink);
 	line-height: 18px;
-	color: var(--basic-white);
-	text-transform: uppercase;
 }
 
 .order-pink:hover {
@@ -128,15 +130,12 @@ img {
 
 .order-pink:focus {
 	background-color: var(--basic-extra-dark-pink);
-	color: var(--basic-white);
 	opacity: 0.3;
 }
 
 .order-green {
 	background-color: var(--basic-green);
 	line-height: 18px;
-	color: var(--basic-white);
-	text-transform: uppercase;
 }
 
 .order-green:hover {
@@ -145,15 +144,12 @@ img {
 
 .order-green:focus {
 	background-color: var(--basic-extra-dark-green);
-	color: var(--basic-white);
 	opacity: 0.3;
 }
 
 .order-yellow {
 	background-color: var(--basic-yellow);
 	line-height: 18px;
-	color: var(--basic-white);
-	text-transform: uppercase;
 }
 
 .order-yellow:hover {
@@ -162,10 +158,8 @@ img {
 
 .order-yellow:focus {
 	background-color: var(--basic-extra-dark-yellow);
-	color: var(--basic-white);
 	opacity: 0.3;
 }
-
 
 .about {
 	color: var(--basic-dark);
@@ -230,7 +224,6 @@ img {
 }
 
 .contact-us {
-	color: var(--basic-white);
 	background-color: var(--basic-pink);
 }
 
@@ -241,6 +234,9 @@ img {
 }
 
 .networks-icon {
+	width: 81px;
+	height: 81px;
+	border-radius: 50%;
 	background-color: var(--basic-grey);
 }
 
@@ -253,4 +249,55 @@ img {
 .offer p {
 	color: var(--basic-low-dark);
 	line-height: 22px;
+}
+
+.container, .container a {
+	color: var(--basic-black);
+	text-transform: uppercase;
+}
+
+.catalog-title {
+	font-size: 55px;
+	line-height: 55px;
+	font-weight: 500;
+	text-transform: none;
+}
+
+.sorting-title {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+	text-transform: none;
+}
+
+.sorting-list {
+	list-style: none;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+	opacity: 0.3;
+}
+
+.sorting-list li:hover {
+	opacity: 0.6;
+}
+
+.sorting-list li:focus {
+	opacity: 1;
+}
+
+.template-list {
+	list-style: none;
+}
+
+.template a {
+	background-color: var(--basic-grey);
+}
+
+.template a: hover {
+	background-color: var(--basic-dark-grey);
+}
+
+.template a: focus {
+	background-color: var(--basic-extra-dark-grey);
 }
