@@ -263,14 +263,16 @@ img {
 	text-transform: none;
 }
 
-.sorting-title {
+.catalog-sort-title {
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
 	text-transform: none;
 }
 
-.sorting-list {
+.catalog-sort-list {
+	margin: 0px;
+	padding: 0px;
 	list-style: none;
 	font-size: 14px;
 	line-height: 18px;
@@ -278,32 +280,34 @@ img {
 	opacity: 0.3;
 }
 
-.sorting-list li:hover {
+.catalog-sort-list li:hover {
 	opacity: 0.6;
 }
 
-.sorting-list li:focus {
+.catalog-sort-list li:active {
 	opacity: 1;
 }
 
-.template-list {
+.catalog-list {
+	margin: 0px;
+	padding: 0px;
 	list-style: none;
 }
 
-.shop-button {
+.pagination-link {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 18px;
 }
 
-.shop-button {
+.pagination-link {
 	background-color: var(--basic-grey);
 }
 
-.shop-button: hover {
+.pagination-link:hover {
 	background-color: var(--basic-dark-grey);
 }
 
-.shop-button: focus {
+.pagination-link:active {
 	background-color: var(--basic-extra-dark-grey);
 }

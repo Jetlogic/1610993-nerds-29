@@ -25,21 +25,22 @@
   	<main class="container">
   		<h1 class="catalog-title">Магазин готовых шаблонов</h1>
   		<section class="catalog">
-  			<div class="filter">
+  			<div class="catalog-filter">
   				<!-- Форма фильтра -->
   			</div>
-  			<div class="sorting">
-  				<h2 class="sorting-title">Сортировать:</h2>
-  				<ul class="sorting-list">
+  			<div class="catalog-sort">
+  				<h2 class="catalog-sort-title">Сортировать:</h2>
+  				<ul class="catalog-sort-list">
   					<li><a href="">По цене</a></li>
   					<li><a href="">По типу</a></li>
   					<li><a href="">По названию</a></li>
   				</ul>
-  				<a class="button-down" href="">Вниз</a>
-  				<a class="button-up" href="">Вверх</a>	
+          <div class="sort-order">
+  				<a class="sort-button sort-button-down" href="">Вниз</a>
+  				<a class="sort-button sort-button-up" href="">Вверх</a>
+          </div>	
   			</div>
-  			<div class="template">
-  			<ul class="template-list">
+  			<ul class="catalog-list">
   				<li><a href=""><img src="https://via.placeholder.com/359x578" alt="Sedona"></a></li>
   				<li><a href=""><img src="https://via.placeholder.com/359x578" alt="Pink"></a></li>
   				<li><a href=""><img src="https://via.placeholder.com/359x578" alt="Borodinsky"></a></li>
@@ -47,11 +48,12 @@
   				<li><a href=""><img src="https://via.placeholder.com/359x578" alt="A+"></a></li>
   				<li><a href=""><img src="https://via.placeholder.com/359x578" alt="Кваст"></a></li>
   			</ul>
-  				<a class="shop-button" href="">1</a>
-    			<a class="shop-button" href="">2</a>
-    			<a class="shop-button" href="">3</a>
-    			<a class="shop-button" href="">Следующая</a>
-  			</div>
+        <div class="pagination">
+  				<a class="pagination-link active">1</a>
+    			<a class="pagination-link" href="">2</a>
+    			<a class="pagination-link" href="">3</a>
+    			<a class="pagination-link pagination-link-next" href="">Следующая</a>
+        </div>
   		</section>
   	</main>
   <footer class="page-footer">
