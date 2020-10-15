@@ -49,8 +49,8 @@ img {
 .site-navigation, .basket {
 	text-transform: uppercase;
 	list-style: none;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 .site-navigation a, .basket {
@@ -81,7 +81,7 @@ img {
 	font-size: 55px;
 	line-height: 55px;
 	color: var(--basic-black);
-	margin: 0px;
+	margin: 0;
 }
 
 .button {
@@ -92,7 +92,7 @@ img {
 .learn-more {
 	background-color: var(--basic-pink);
 	line-height: 18px;
-	margin: 0px;
+	margin: 0;
 }
 
 .learn-more:hover {
@@ -179,8 +179,8 @@ img {
 }
 
 .about-features {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 .achievments {
@@ -204,8 +204,8 @@ img {
 
 .clients-list {
 	list-style: none;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 .contacts {
@@ -229,8 +229,8 @@ img {
 
 .networks-list {
 	list-style: none;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 .networks-icon {
@@ -271,8 +271,8 @@ img {
 }
 
 .catalog-sort-list {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	font-size: 14px;
 	line-height: 18px;
@@ -289,8 +289,8 @@ img {
 }
 
 .catalog-list {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
