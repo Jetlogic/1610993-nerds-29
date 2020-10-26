@@ -259,7 +259,7 @@ img {
 
 .footer-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 2fr;
 }
 
 .networks-list {
@@ -296,6 +296,13 @@ img {
 	line-height: 55px;
 	font-weight: 500;
 	text-transform: none;
+	background-color: var(--basic-grey);
+	margin: 0;
+}
+
+.catalog {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
 }
 
 .catalog-sort-title {
