@@ -49,14 +49,15 @@ img {
 	align-content: start;
 }
 
+.main-header {
+	background-color: var(--basic-grey);
+}
+
 .main-navigation {
-	display: grid;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 30px;
 	color: var(--basic-white);
-	background-color: var(--basic-grey);
-	grid-template-columns: 1fr 1fr 1fr; 
 }
 
 .site-navigation, .basket {
@@ -78,6 +79,12 @@ img {
 	color: var(--basic-black);
 	mix-blend-mode: normal;
 	opacity: 0.3;
+}
+
+.container {
+	width: 1160px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .title {
@@ -181,7 +188,7 @@ img {
 
 .about {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	color: var(--basic-dark);
 }
 
@@ -199,6 +206,7 @@ img {
 }
 
 .about-features {
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
@@ -223,9 +231,11 @@ img {
 }
 
 .clients-list {
+	display: grid;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .contacts {
