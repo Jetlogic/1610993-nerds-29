@@ -325,13 +325,16 @@ img {
 	text-transform: uppercase;
 }
 
-.catalog-title{
+.intro {
+	background-color: var(--basic-grey);
+}
+
+.page-title{
 	width: 727px;
 	font-size: 55px;
 	line-height: 55px;
 	font-weight: 500;
 	text-transform: none;
-	background-color: var(--basic-grey);
 	margin: 0 auto;
 }
 
@@ -349,12 +352,13 @@ img {
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
-	margin-right: 266px; 
 }
 
 .catalog-sort-list {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
+	margin-left: auto;
 	padding: 0;
 	list-style: none;
 	font-size: 14px;
