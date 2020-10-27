@@ -55,6 +55,7 @@ img {
 
 .main-navigation {
 	display: flex;
+	align-items: center;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 30px;
@@ -65,7 +66,6 @@ img {
 .site-navigation {
 	display: flex;
 	width: 437px;
-	height: 30px;
 }
 
 .site-navigation, .basket {
@@ -75,15 +75,7 @@ img {
 	padding: 0;
 }
 
-.site-navigation li:nth-child(1) {
-	margin-right: 45px;
-}
-
-.site-navigation li:nth-child(2) {
-	margin-right: 45px;
-}
-
-.site-navigation li:nth-child(3) {
+.site-navigation li:not(:last-child) {
 	margin-right: 45px;
 }
 
@@ -109,6 +101,18 @@ img {
 
 .title {
 	display: none;
+}
+
+.features .container {
+	display: flex;
+}
+
+.features-item {
+	display: none;
+}
+
+.features-item.active {
+	display: block;
 }
 
 .features {
@@ -294,7 +298,7 @@ img {
 	padding: 0;
 }
 
-.networks-list li:nth-child(1) {
+.networks-list li:nth-child(2) {
 	margin-right: 10.21px;
 }
 
