@@ -65,6 +65,7 @@ img {
 
 .site-navigation {
 	display: flex;
+	flex-wrap: wrap;
 	width: 437px;
 }
 
@@ -81,6 +82,7 @@ img {
 
 .site-navigation a, .basket {
 	color: var(--basic-black);
+	display: block;
 }
 
 .site-navigation a:hover, .basket:hover {
@@ -93,14 +95,40 @@ img {
 	opacity: 0.3;
 }
 
+.basket::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.user-navigation, .basket {
+	padding-left: 39px;
+	position: relative;
+}
+
 .container {
 	width: 1160px;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.title {
-	display: none;
+.visually-hidden {
+  	position: absolute;
+  	width: 1px;
+  	height: 1px;
+  	margin: -1px;
+  	border: 0;
+  	padding: 0;
+  	white-space: nowrap;
+  	clip-path: inset(100%);
+  	clip: rect(0 0 0 0);
+  	overflow: hidden;
 }
 
 .features .container {
@@ -109,15 +137,29 @@ img {
 
 .features-item {
 	display: none;
+	margin-top: 78px;
 }
 
 .features-item.active {
 	display: block;
 }
 
+.features::before {
+  content: "";
+  position: absolute;
+  right: 150px;	
+  width: 760px;
+  height: 431px;
+  background-image: url("../img/slide-1.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .features {
 	background-color: var(--basic-grey);
 	color: var(--basic-dark);
+	height: 431px;
+	margin-bottom: 80px;
 }
 
 .features-item-title {
@@ -128,12 +170,23 @@ img {
 	margin: 0;
 }
 
+.features-item a {
+	margin-top: 25px;
+	margin-bottom: 38px;
+}
+
 .button {
 	text-transform: uppercase;
 	color: var(--basic-white);
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .learn-more {
+	width: 240px;
+	height: 50px;
 	background-color: var(--basic-pink);
 	line-height: 18px;
 	margin: 0;
@@ -148,17 +201,42 @@ img {
 	opacity: 0.3;
 }
 
+.features-button-active::before {
+	content: "";
+  	position: absolute;
+  	left: 5px;
+  	bottom: 5px;
+  	width: 8px;
+  	height: 8px;
+  	background-image: url("../img/ellipse.svg");
+  	background-repeat: no-repeat;
+  	background-position: 0 0;
+}
+
 .features-button {
+	position: relative;
+	top: 315px;
+	left: 195px;
 	background-color: var(--basic-white);
+	width: 18px;
+	height: 18px;
+	border: none;
+	border-radius: 50%;
 }
 
 .products {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr; 
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 80px; 
 }
 
 .product-item {
 	color: var(--basic-dark);
+}
+
+.product-item p {
+	margin-bottom: 32px;
+	width: 260px;
 }
 
 .product-item-title {
@@ -166,9 +244,14 @@ img {
 	font-size: 24px;
 	line-height: 30px;
 	color: var(--basic-black);
+	text-transform: uppercase;
+	margin-bottom: 16px;
+	margin-top: 25px;
 }
 
 .order-pink {
+	width: 160px;
+	height: 50px;
 	background-color: var(--basic-pink);
 	line-height: 18px;
 }
@@ -183,6 +266,8 @@ img {
 }
 
 .order-green {
+	width: 160px;
+	height: 50px;
 	background-color: var(--basic-green);
 	line-height: 18px;
 }
@@ -197,6 +282,8 @@ img {
 }
 
 .order-yellow {
+	width: 160px;
+	height: 50px;
 	background-color: var(--basic-yellow);
 	line-height: 18px;
 }
@@ -214,9 +301,15 @@ img {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	color: var(--basic-dark);
+	border: 2px solid var(--basic-grey);
+	border-left: none;
+	border-right: none;
+	padding-top: 39px;
+	padding-bottom: 73px;
 }
 
 .about-title {
+	width: 651px;
 	font-weight: 500;
 	font-size: 45px;
 	line-height: 45px;
@@ -227,10 +320,18 @@ img {
 	padding-right: 149px;
 }
 
+.about-item p {
+	margin-top: 32px;
+	margin-bottom: 40px;
+}
+
 .about-item b {
+	display: block;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: var(--basic-black);
+	margin-bottom: 23px;
+	padding: 0;	
 }
 
 .about-features {
@@ -239,10 +340,41 @@ img {
 	padding: 0;
 }
 
+.about-features li:not(:last-child) {
+	margin-bottom: 36px;
+}
+
+.about-features li::before {
+	content: "";
+  	position: absolute;
+  	left: 0;
+  	bottom: 11px;	
+  	width: 25px;
+  	height: 2px;
+  	background-color: var(--basic-pink);
+}
+
+.about-features li {
+	position: relative;
+	padding-left: 32px;
+}
+
 .achievments {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 18px;
+}
+
+.achievments b {
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	margin-bottom: 31px;
+	margin-top: 37px;
+}
+
+.achievments table {
+	border-spacing: 20px 20px;
 }
 
 .percents {
@@ -258,6 +390,15 @@ img {
 	color: var(--basic-black);
 }
 
+.clients {
+	margin-top: 45px;
+	border: 2px solid var(--basic-grey);
+	padding-bottom: 45px;
+	border-right: none;
+	border-top: none;
+	border-left: none;
+}
+
 .clients-list {
 	display: grid;
 	list-style: none;
@@ -266,11 +407,36 @@ img {
 	grid-template-columns: repeat(4, 1fr);
 }
 
+.page-footer {
+	margin-top: 80px;
+}
+
+.map {
+	position: relative;
+	left: 35px;
+}
+
 .contacts {
+	position: absolute;
+	bottom: -1475px;
+	left: 175px;
 	color: var(--basic-extra-low-dark);
+	width: 319px;
+	height: 308px;
+	background-color: var(--basic-white);
+}
+
+.contacts p {
+	margin-left: 50px;
+}
+
+.contacts p:last-of-type {
+	padding-bottom: 20px;
 }
 
 .contacts-title {
+	margin-left: 50px;
+	margin-top: 49px;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 30px;
@@ -283,11 +449,16 @@ img {
 
 .contact-us {
 	background-color: var(--basic-pink);
+	width: 219px;
+	height: 50px;
+	margin-left: 50px;
 }
 
 .footer-container {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
+	margin-top: 0;
+	padding-top: 0;
 }
 
 .networks-list {
@@ -302,11 +473,36 @@ img {
 	margin-right: 10px;
 }
 
-.networks-icon {
+.networks-list a {
+	display: block;
+	position: relative;
 	width: 81px;
 	height: 81px;
 	border-radius: 50%;
 	background-color: var(--basic-grey); 
+}
+
+.networks-list a:hover,
+.networks-list a:focus {
+	background-color: var(--basic-dark-pink);
+}
+
+.vk-icon {
+	position: absolute;
+	top: 34px;
+	left: 27px;
+}
+
+.fb-icon {
+	position: absolute;
+	top: 31px;
+	left: 35px;
+}
+
+.insta-icon {
+	position: absolute;
+	top: 30px;
+	left: 30px;
 }
 
 .offer b {
