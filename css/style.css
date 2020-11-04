@@ -104,7 +104,6 @@ img {
   height: 15px;
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .user-navigation, .basket {
@@ -116,6 +115,7 @@ img {
 	width: 1160px;
 	margin-right: auto;
 	margin-left: auto;
+	padding: 0 20px;
 }
 
 .visually-hidden {
@@ -137,29 +137,30 @@ img {
 
 .features-item {
 	display: none;
-	margin-top: 78px;
+	padding-top: 78px;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: 760px 431px;
 }
 
 .features-item.active {
 	display: block;
+	background-image: url(../img/slide-1.png);
 }
 
-.features::before {
-  content: "";
-  position: absolute;
-  right: 150px;	
-  width: 760px;
-  height: 431px;
-  background-image: url("../img/slide-1.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.features-item:nth-child(2) {
+	background-image: url(../img/slide-2.png);
+}
+
+.features-item:nth-child(3) {
+	background-image: url(../img/slide-3.png);
 }
 
 .features {
+	position: relative;
 	background-color: var(--basic-grey);
 	color: var(--basic-dark);
 	height: 431px;
-	margin-bottom: 80px;
 }
 
 .features-item-title {
@@ -168,11 +169,6 @@ img {
 	line-height: 55px;
 	color: var(--basic-black);
 	margin: 0;
-}
-
-.features-item a {
-	margin-top: 25px;
-	margin-bottom: 38px;
 }
 
 .button {
@@ -185,8 +181,12 @@ img {
 }
 
 .learn-more {
-	width: 240px;
-	height: 50px;
+	margin-top: 25px;
+	margin-bottom: 38px;
+	padding-top: 17px;
+	padding-bottom: 15px;
+	padding-left: 54px;
+	padding-right: 54px;
 	background-color: var(--basic-pink);
 	line-height: 18px;
 	margin: 0;
@@ -201,22 +201,22 @@ img {
 	opacity: 0.3;
 }
 
+.features-pagination {
+	position: absolute;
+	bottom: 96px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .features-button-active::before {
 	content: "";
-  	position: absolute;
-  	left: 5px;
-  	bottom: 5px;
   	width: 8px;
   	height: 8px;
-  	background-image: url("../img/ellipse.svg");
-  	background-repeat: no-repeat;
-  	background-position: 0 0;
+  	border: 2px solid var(--basic-grey);
+  	border-radius: 50%;
 }
 
 .features-button {
-	position: relative;
-	top: 315px;
-	left: 195px;
 	background-color: var(--basic-white);
 	width: 18px;
 	height: 18px;
@@ -227,7 +227,9 @@ img {
 .products {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	margin-bottom: 80px; 
+	padding-top: 80px;
+	padding-bottom: 80px;
+	border-bottom: 2px solid var(--basic-grey); 
 }
 
 .product-item {
@@ -237,6 +239,10 @@ img {
 .product-item p {
 	margin-bottom: 32px;
 	width: 260px;
+}
+
+.product-item img {
+	display: block;
 }
 
 .product-item-title {
@@ -301,9 +307,7 @@ img {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	color: var(--basic-dark);
-	border: 2px solid var(--basic-grey);
-	border-left: none;
-	border-right: none;
+	border-bottom: 2px solid var(--basic-grey);
 	padding-top: 39px;
 	padding-bottom: 73px;
 }
@@ -391,12 +395,9 @@ img {
 }
 
 .clients {
-	margin-top: 45px;
-	border: 2px solid var(--basic-grey);
+	padding-top: 45px;
+	border-bottom: 2px solid var(--basic-grey);
 	padding-bottom: 45px;
-	border-right: none;
-	border-top: none;
-	border-left: none;
 }
 
 .clients-list {
@@ -413,16 +414,25 @@ img {
 
 .map {
 	position: relative;
-	left: 35px;
+	width: 100%;
+	height: 416px;
+}
+
+.map img {
+	position: absolute;
+  	top: 0;
+  	left: 50%;
+  	transform: translateX(-50%);
+  	z-index: -1;	
 }
 
 .contacts {
 	position: absolute;
-	bottom: -1475px;
-	left: 175px;
+	top: -360px;
+	left: 20px;
 	color: var(--basic-extra-low-dark);
-	width: 319px;
-	height: 308px;
+	width: 320px;
+	padding-bottom: 47px;
 	background-color: var(--basic-white);
 }
 
@@ -455,10 +465,13 @@ img {
 }
 
 .footer-container {
+	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	margin-top: 0;
-	padding-top: 0;
+}
+
+.networks, .offer {
+	padding-top: 70px;
 }
 
 .networks-list {
@@ -474,8 +487,9 @@ img {
 }
 
 .networks-list a {
-	display: block;
-	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 81px;
 	height: 81px;
 	border-radius: 50%;
@@ -485,24 +499,6 @@ img {
 .networks-list a:hover,
 .networks-list a:focus {
 	background-color: var(--basic-dark-pink);
-}
-
-.vk-icon {
-	position: absolute;
-	top: 34px;
-	left: 27px;
-}
-
-.fb-icon {
-	position: absolute;
-	top: 31px;
-	left: 35px;
-}
-
-.insta-icon {
-	position: absolute;
-	top: 30px;
-	left: 30px;
 }
 
 .offer b {
